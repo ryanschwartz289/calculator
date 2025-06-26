@@ -1,0 +1,12 @@
+.util {
+  background-color: #ff3f33;
+}
+
+.disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.disabled:hover {
+  transform: none;
+}

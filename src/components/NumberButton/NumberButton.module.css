@@ -1,0 +1,8 @@
+.period {
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.number {
+  background-color: #0d5ea6;
+}

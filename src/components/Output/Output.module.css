@@ -1,0 +1,14 @@
+.output {
+  width: 100%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 10%;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.581);
+  overflow: hidden;
+}
