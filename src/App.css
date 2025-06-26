@@ -96,6 +96,6 @@ main {
 
 @media (max-width: 600px) {
   .button {
-    height: calc((100dvh - 3%-10%) / 6);
+    height: 80px;
   }
 }
