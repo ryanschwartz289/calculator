@@ -1,69 +1,60 @@
-# React + TypeScript + Vite
+# React Calculator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, modular calculator built with React, TypeScript, and Material UI. Supports keyboard and button input, undo/redo/history, math parsing, and a responsive UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modular Components:** Number, operator, and utility buttons are reusable and customizable.
+- **Keyboard & Button Input:** Use your keyboard or click buttons for all calculator operations.
+- **Undo/Redo & History:** Step backward/forward through calculations. History is preserved for easy review.
+- **Math Parsing:** Expressions are parsed and evaluated using `mathjs` for accuracy and flexibility.
+- **Responsive UI:** Layout adapts to different screen sizes. Tooltips provide keyboard shortcut hints.
+- **Accessibility:** All buttons have descriptive tooltips and keyboard navigation support.
 
-## Expanding the ESLint configuration
+## Key Bindings
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Numbers & Operators:** Use 0-9, +, -, \*, /, =, Enter, and .
+- **Undo:** Ctrl/Cmd + Z
+- **Redo:** Ctrl/Cmd + Y or Shift + Z
+- **Clear:** Esc or C
+- **Delete:** Backspace or ⌫
+- **Toggle Sign:** +/- button
+- **Show Keybindings:** Hamburger icon in the UI
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+2. **Start the development server:**
+   ```sh
+   npm run dev
+   ```
+3. **Open in browser:**
+   Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Project Structure
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- `src/components/` — Modular React components (NumberButton, Operator, Output, UtilButton, etc.)
+- `src/utils/` — Utility functions for keyboard handling, math operations, and history management
+- `src/App.tsx` — Main app logic and state management
+- `public/` — Static assets
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Customization
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Add new operations:** Edit `src/utils/operations.ts` and update the Operator component.
+- **Change layout or styles:** Edit component CSS modules or `App.css`.
+- **Update keybindings:** See `src/utils/keyboardUtils.ts` and `KeybindingsList` component.
+
+## Dependencies
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Material UI](https://mui.com/)
+- [mathjs](https://mathjs.org/)
+- [Vite](https://vitejs.dev/)
+
+## License
+
+MIT
