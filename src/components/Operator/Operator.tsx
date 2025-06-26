@@ -1,4 +1,3 @@
-// import { divide, multiply, add, subtract } from "../../utils/operations";
 import styles from "./Operator.module.css";
 import { evaluate } from "mathjs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
