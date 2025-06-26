@@ -24,5 +24,5 @@ dist-ssr
 *.sw?
 
 # Not ready for production
-src/components/Keybindings
+src/components/Keybinding
 src/components/KeybindingsList
